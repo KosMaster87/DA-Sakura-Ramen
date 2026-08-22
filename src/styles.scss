@@ -1,0 +1,26 @@
+/* raleway-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/assets/fonts/raleway-v34-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+$dark_red: rgb(182, 38, 38);
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Economica', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+.fontRaleway {
+  font-family: 'Raleway';
+}

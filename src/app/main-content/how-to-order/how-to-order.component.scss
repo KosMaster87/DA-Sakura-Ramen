@@ -1,0 +1,78 @@
+.c_order {
+  // position: relative;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  padding-top: 8rem;
+
+  > h2 {
+    text-align: center;
+    font-size: clamp(46px, 3.5vw + 1.5rem, 64px);
+  }
+}
+
+.myMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.myOrder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ' orderOne orderTwo orderThree ';
+
+  // display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding-bottom: 7rem;
+  padding-top: 7rem;
+
+  gap: 3rem;
+  width: 100%;
+  max-width: 1280px;
+
+  & span {
+    padding: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+  }
+}
+
+.order {
+  grid-area: orderOne orderTwo orderTre;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > img {
+    width: clamp(100px, 3vh + 7rem, 160px);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+  .myOrder {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      ' orderOne '
+      ' orderTwo '
+      ' orderThree ';
+  }
+
+  .order {
+    grid-area: orderOne orderTwo orderTre;
+    > img {
+      width: clamp(150px, 3vh + 8rem, 170px);
+    }
+  }
+}
